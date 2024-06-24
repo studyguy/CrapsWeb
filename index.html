@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="height=device-height,width=device-width, initial-scale=1.0"> <!-- 确保网页在移动设备上自适应 -->
+    <title>欢迎来到Craps</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>欢迎来到Craps</h1>
+        <div id="money">CRAPS又称花旗骰，是美国拉斯维加斯非常受欢迎的一种的桌上赌博游戏。规则是：玩家第一次摇骰子如果摇出了7点或11点，玩家胜；玩家第一次如果摇出2点、3点或12点，庄家胜；玩家如果摇出其他点数则玩家继续摇骰子，如果玩家摇出了7点，庄家胜；如果玩家摇出了第一次摇的点数，玩家胜；其他点数玩家继续摇骰子，直到分出胜负。</div>
+        <br>
+        <div id="money">你的总资产：<span id="money-amount">1000</span>元</div>
+        <div id="bet-input">
+            <input type="number" id="bet-amount" placeholder="请输入下注金额" min="1" max="1000">
+            <button onclick="placeBet()">修改下注</button>
+            <button onclick="rollDice()">投掷色子</button>
+        </div>
+        <div id="dice-result"></div>
+        <div id="game-status"></div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

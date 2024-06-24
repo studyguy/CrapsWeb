@@ -1,0 +1,51 @@
+body {
+    display: flex; /* 使body成为一个Flex容器 */
+    justify-content: center; /* 水平居中子元素 */
+    align-items: center; /* 垂直居中子元素 */
+    min-height: 100vh; /* 设置body的最小高度为视口的100%，确保有足够的空间进行居中 */
+    margin: 0; /* 移除默认的外边距 */
+    padding: 0; /* 移除默认的内边距 */
+    background-color: #f4f4f4; /* 背景颜色 */
+}
+
+#game-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* 容器宽度设为100%，最大宽度不超过500px */
+    max-width: 300px; /* 设定最大宽度 */
+    margin: auto; /* 保持左右自动边距，现在这个属性不会有效果，因为Flexbox已经居中了 */
+    height: 500px;
+    text-align: center; /* 居中文本 */
+}
+
+button {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#bet-input input {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: calc(100% - 22px); /* 减去内边距和边框宽度 */
+}
+
+/* 媒体查询，用于适配移动端设备 */
+@media (max-width: 600px) {
+    #game-container {
+        width: 90%;
+    }
+}
